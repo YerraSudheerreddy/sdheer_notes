@@ -1,0 +1,79 @@
+FROM node:16
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 80
+CMD ["node", "index.js"]
+
+
+
+docker "old tag name" username/reponame:tag
+
+docker login
+
+docker push username/reponame:tag
+
+pipeline {
+    agent any
+       tools{
+           maven"mymaven"
+       }
+
+    stages {
+        stage("code") {
+            steps {
+                git "https://github.com/YerraSudheerreddy/dockerwebapp.git"
+            }
+        }
+         stage("CQA") {
+             steps{
+                withSonarQubeEnv("mysonar") {
+                sh "mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=myproject"
+              }
+         }
+     }
+   }
+}
+
+
+====================================
+pipeline {
+    agent any
+       tools{
+           maven"mymaven"
+       }
+
+    stages {
+        stage("code") {
+            steps {
+                git "https://github.com/YerraSudheerreddy/dockerwebapp.git"
+            }
+        }
+         stage("CQA") {
+             steps{
+                withSonarQubeEnv("mysonar") {
+                sh "mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=myproject1"
+              }
+            }
+          }
+           stage("build"){
+         steps{
+             sh "mvn clean package"
+             sh "cp -r target Docker-app"
+         }
+     }
+     stage("Dockerfile"){
+         steps{
+             sh "docker build -t appimage Docker-app"
+             sh "docker build -t bdimage Docker-db"
+         }
+     }
+       stage("deploy"){
+            steps{
+               sh "docker run -d --name devopsdb -p 3306:3306 bdimage"
+               sh "docker run -itd --name appcont -p 1234:8080 --link devopsdb:mysqlcon appimage"
+            }
+        }
+   }
+}
