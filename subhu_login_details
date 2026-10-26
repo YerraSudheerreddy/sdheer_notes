@@ -1,0 +1,530 @@
+
+
+SSO      550007123            Krishav06092025@ge
+
+---------------------------------------------------------------------------------------------
+
+AWS
+
+Mail ID: sudharsansubramanian2000@gmail.com
+
+PWD: Sudharsan@9381
+
+---------------------------------------------------------------------------------------------
+
+Azure
+
+Mail ID: saisudharsan265@gmail.com
+
+Fingerprint
+
+-----------------------------------------------------------------------------
+
+Deepseek Account:
+
+Email ID: saisudharsan265@gmail.com
+
+Password: Karaikudi@123
+
+------------------------------------------------------------------------------
+GITHUB:
+
+Mail ID: saisudharsan265@gmail.com
+
+PWD: Karaikudi@12345
+
+Username: Sudharsan-Yadav
+
+Token : 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
+
+-------------------------------------------------------------------------
+
+DOCKERHUB:
+
+Mail ID: saisudharsan265@gmail.com
+
+PWD: Karaikudi@12345
+
+Username: sudharsan06122000
+
+Token : dckr_pat_PvsAJPIpweZ4mCoaW932td9qWv0
+
+---------------------------------------------------------------------------
+
+New Relic:
+
+Mail ID: sudharsansubramanian2000@gmail.com / s.sudharsan20@tcs.com
+
+PWD: Omsairam@12345
+
+---------------------------------------------------------------------------
+
+MAPBOX:
+
+Mail ID: sudharsansubramanian2000@gmail.com
+
+PWD: Saraswathi@12345
+
+Username: sudharsan06122000
+
+---------------------------------------------------------------------------
+
+CLOUDINARY:
+
+Mail ID: sudharsansubramanian2000@gmail.com
+
+PWD: Saraswathi@12345
+
+Username: Sudharsan S
+
+---------------------------------------------------------------------------
+
+MONGODB:
+
+Mail ID: sudharsansubramanian2000@gmail.com
+
+PWD: Sairam@123
+
+Username: Sudharsan S
+
+---------------------------------------------------------------------------
+Hashnode.com:
+
+https://cloudcomputingbymustafa.hashnode.dev/	
+
+---------------------------------------------------------------------------
+
+Bitbucket:
+
+Workspace name: sudharsan_2000
+
+Mail ID: saisudharsan265@gmail.com
+
+Username: Sudharsan S
+
+PWD: Krishav@12345
+
+Token: ATATT3xFfGF0PCzu2vukfEVVQJq8ErJ84X8EddnvYRzdKPbX2WpuzKgommf78w5s-MY5Ort6QD_0fdJvVXGZJA3TPeWibGgB8FxMRXPiTLIghmKWTMtMQD3Y91sp60lOIijvKQX279MLGTG0gWASqaqf0bSrgaaWKegyehKc-WNaL4FZL2ca0RI=BF2FF47F
+
+---------------------------------------------------------------------------
+
+crontab.guru -- to calculate the timings in Jenkins
+
+---------------------------------------------------------------------------
+
+Jenkins and GIT Installation:
+
+yum install java-21-amazon-corretto -y
+java -version
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo
+yum install jenkins -y
+systemctl status jenkins
+systemctl start jenkins
+systemctl status jenkins
+yum install git -y
+
+------------------------------------------------------------------------------------
+
+Jenkins:
+
+Username: Sudharsan
+
+Password: Asdfghjkl12345
+
+Confirm Password: Asdfghjkl12345
+
+Full Name: Sudharsan
+
+Email: saisudharsan265@gmail.com
+
+----------------------------------------------------------------------------------------
+
+Maven:
+
+yum install maven -y
+mvn -version
+mvn archetype:generate
+groupId: Sudhan
+artifactId: devops
+mvn compile
+mvn test
+mvn package	
+mvn install
+mvn clean
+
+----------------------------------------------------------------------------------------s
+
+TOMCAT:
+
+yum install java-21-amazon-corretto -y
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.121/bin/apache-tomcat-9.0.121.tar.gz
+tar -zxvf apache-tomcat-9.0.121.tar.gz
+sed -i '56  a\<role rolename="manager-gui"/>' apache-tomcat-9.0.121/conf/tomcat-users.xml
+sed -i '57  a\<role rolename="manager-script"/>' apache-tomcat-9.0.121/conf/tomcat-users.xml
+sed -i '58  a\<user username="tomcat" password="admin@12345" roles="manager-gui, manager-script"/>' apache-tomcat-9.0.121/conf/tomcat-users.xml
+sed -i '59  a\</tomcat-users>' apache-tomcat-9.0.121/conf/tomcat-users.xml
+sed -i '56d' apache-tomcat-9.0.121/conf/tomcat-users.xml
+sed -i '21d' apache-tomcat-9.0.121/webapps/manager/META-INF/context.xml
+sed -i '22d'  apache-tomcat-9.0.121/webapps/manager/META-INF/context.xml
+sh apache-tomcat-9.0.121/bin/startup.sh
+
+-----------------------------------------------------------------------
+
+NEXUS:
+
+yum install java-21-amazon-corretto -y
+java -version
+cd /opt
+wget https://download.sonatype.com/nexus/3/nexus-3.93.0-06-linux-x86_64.tar.gz
+tar -zxvf nexus-3.93.0-06-linux-x86_64.tar.gz
+useradd nexus
+chown -R nexus:nexus nexus-3.93.0-06 sonatype-work/
+su - nexus
+cd /opt/nexus-3.93.0-06/bin/
+./nexus start
+
+New Password: Asdfghjkl12345
+
+Confirm Password: Asdfghjkl12345
+
+----------------------------------------------------------------------------
+
+SONAR
+
+yum install java-11-amazon-corretto -y
+java -version
+cd /opt
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.6.50800.zip
+unzip sonarqube-8.9.6.50800.zip
+useradd sonar
+chown -R sonar:sonar sonarqube-8.9.6.50800
+chmod -R 777 sonarqube-8.9.6.50800
+su - sonar
+cd /opt/sonarqube-8.9.6.50800/bin/linux-x86-64/
+./sonar.sh start
+
+New Password: Asdfghjkl12345
+
+Confirm Password: Asdfghjkl12345
+
+-----------------------------------------------------------------------------------------------------
+
+Docker_compose:
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+sudo yum install -y python3-pip
+sudo pip3 install docker-compose
+
+------------------------------------------------------------------------------------------------------
+
+Portainer:
+
+curl -L https://downloads.portainer.io/ce2-16/portainer-agent-stack.yml -o portainer-agent-stack.yml
+docker stack deploy -c portainer-agent-stack.yml portainer
+docker ps
+
+---------------------------------------------------------------------------------------------------------
+
+Trivy:
+
+curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh \
+| sudo sh -s -- -b /usr/local/bin
+
+TMPDIR=/opt/trivy/tmp TRIVY_CACHE_DIR=/opt/trivy/cache
+
+If error occurs:
+
+mkdir -p /opt/trivy/tmp
+mkdir -p /opt/trivy/cache
+export TMPDIR=/opt/trivy/tmp
+export TRIVY_CACHE_DIR=/opt/trivy/cache
+echo $TMPDIR
+echo $TRIVY_CACHE_DIR
+
+O/P:
+/opt/trivy/tmp
+/opt/trivy/cache
+-----------------------------------------------------------------------------------------------------------
+
+Minikube:
+
+yum install docker -y && systemctl start docker
+curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+minikube version
+minikube start --driver=docker --force
+minikube status
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+mv kubectl /usr/local/bin
+kubectl version
+
+---------------------------------------------------------------------------------------------------------------------------
+
+KOPS:
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+mv kubectl /usr/local/bin
+kubectl version
+curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+chmod +x kops
+sudo mv kops /usr/local/bin/kops
+kops version
+
+export KOPS_STATE_STORE=s3://krishna.2026
+kops create cluster --name sudhan.k8s.local --zones us-east-2a,us-east-2b,us-east-2c --master-size c7i-flex.large --master-count 1 --master-volume-size 30 --node-size t3.micro --node-count 3 --node-volume-size 20 --image=ami-0eab37cfdc33e8e65
+kops update cluster --name sudhan.k8s.local --yes --admin
+
+export KOPS_STATE_STORE=s3://krishna.2026
+kops delete cluster --name sudhan.k8s.local --yes
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Metrics Server:
+
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability-1.21+.yaml
+(or)
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability.yaml
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Kubens:
+
+curl -sS https://webi.sh/kubens | sh; \
+source ~/.config/envman/PATH.env
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+RBAC:(only works on minikube)
+
+openssl genrsa -out mustafa.key 2048
+openssl req -new -key mustafa.key -out mustafa.csr -subj "/CN=sudhan/O=group1"
+openssl x509 -req -in mustafa.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out mustafa.crt -days 500
+
+----------------------------------------------------------------------------------------------------------------------------
+
+HELM:
+
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4
+chmod 700 get_helm.sh
+./get_helm.sh
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+argoCD:
+
+export KOPS_STATE_STORE=s3://krishna.2026
+kops create cluster --name sudhan.k8s.local --zones us-east-2a,us-east-2b,us-east-2c --master-size m7i-flex.large --master-count 1 --master-volume-size 30 --node-size c7i-flex.large --node-count 3 --node-volume-size 20 --image=ami-0eab37cfdc33e8e65
+kops update cluster --name sudhan.k8s.local --yes --admin
+
+kubectl create namespace argocd
+
+kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+argoCD CLI:
+
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
+
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+
+argoCD Password:
+
+argocd admin initial-password -n argocd 
+
+New Password: Asdfghjkl12345
+
+Confirm Password: Asdfghjkl12345
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Prometheus & Grafana:
+
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability-1.21+.yaml
+
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4
+chmod 700 get_helm.sh
+./get_helm.sh
+
+kubectl create ns prometheus
+
+kubectl create ns grafana
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+helm repo add grafana https://grafana.github.io/helm-charts
+
+helm install prometheus prometheus-community/prometheus \
+  --namespace prometheus \
+  --set alertmanager.persistentVolume.storageClass="gp2" \
+  --set server.persistentVolume.storageClass="gp2"
+
+helm install grafana grafana/grafana \
+  --namespace grafana \
+  --set persistence.storageClassName="gp2" \
+  --set persistence.enabled=true \
+  --set adminPassword='EKS!sAWSome' \
+  --set service.type=LoadBalancer
+
+kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode; echo
+
+http://prometheus-server.prometheus.svc.cluster.local/
+
+-----------------------------------------------------------------------------------------------------------------
+
+Network Policy:
+
+Install Minikube & kubectl
+
+yum install docker -y && systemctl start docker
+curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+minikube version
+minikube start --cni=calico --force
+minikube status
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+mv kubectl /usr/local/bin
+kubectl version
+
+----------------------------------------------------------------------------------------------------------------
+
+ISTIO:
+
+export KOPS_STATE_STORE=s3://krishna.2026
+kops create cluster --name sudhan.k8s.local --zones us-east-2a,us-east-2b,us-east-2c --master-size m7i-flex.large --master-count 1 --master-volume-size 30 --node-size c7i-flex.large --node-count 3 --node-volume-size 20 --image=ami-0eab37cfdc33e8e65
+kops update cluster --name sudhan.k8s.local --yes --admin
+
+curl -L https://istio.io/downloadIstio | sh -
+
+cd istio-1.30.2
+
+export PATH=$PWD/bin:$PATH
+
+istioctl version
+
+kubectl label ns default istio-injection=enabled
+
+istioctl install --set profile=demo -y
+
+kubectl apply -f ./istio-1.31.0/samples/bookinfo/platform/kube/bookinfo.yaml
+
+kubectl patch svc productpage -p '{"spec":{"type":"LoadBalancer"}}'
+------------------------------------------------------------------------------------------------------------------
+
+Ingress:
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
+
+----------------------------------------------------------------------------------------------------------------------
+
+Terraform:
+
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum install terraform
+terraform version
+
+----------------------------------------------------------------------------------------------------------------------
+
+CloudWatch Agent:
+
+In Github, General repository
+
+----------------------------------------------------------------------------------------------------------------------
+
+EFS:
+
+yum install amazon-efs-utils -y
+
+----------------------------------------------------------------------------------------------------------------------
+
+tfsec:
+
+curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
+
+----------------------------------------------------------------------------------------------------------------------
+
+Terraform Vault:
+
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum install vault
+
+vault server -dev -dev-listen-address="0.0.0.0:8200"
+
+----------------------------------------------------------------------------------------------------------------------
+
+Terraformer:
+
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum install terraform
+terraform version
+terraform init
+
+wget https://github.com/GoogleCloudPlatform/terraformer/releases/download/0.8.30/terraformer-all-linux-amd64
+chmod +x terraformer-all-linux-amd64
+sudo mv terraformer-all-linux-amd64 /usr/local/bin/terraformer
+terraformer --version
+
+terraformer import aws --regions=us-east-1 --resources=sg,ec2_instance,elb,s3
+
+----------------------------------------------------------------------------------------------------------------------
+
+EKSCTL:
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+mv kubectl /usr/local/bin
+kubectl version
+
+# for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`
+ARCH=$(uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/')
+PLATFORM=$(uname -s)_$ARCH
+curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
+# (Optional) Verify checksum
+curl -sL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_checksums.txt" | grep $PLATFORM | sha256sum --check
+tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
+sudo install -m 0755 /tmp/eksctl /usr/local/bin && rm /tmp/eksctl
+eksctl version
+
+eksctl create cluster --name=EKS-1 --region=us-east-2 --zones=us-east-2a,us-east-2b --without-nodegroup
+
+eksctl utils associate-iam-oidc-provider --region us-east-2 --cluster EKS-1 --approve
+
+eksctl create nodegroup --cluster=EKS-1 --region=us-east-2 --name=node2 --node-type=c7i-flex.large --nodes=3 --nodes-min=2 --nodes-max=4 --node-volume-size=20 --ssh-access --ssh-public-key=Krishav --managed --asg-access --external-dns-access --full-ecr-access --appmesh-access --alb-ingress-access
+
+aws eks update-kubeconfig --name EKS-1 --region us-east-2
+
+To delete the EKS Cluster:
+
+eksctl delete cluster --name EKS-1 --region us-east-2
+
+----------------------------------------------------------------------------------------------------------------------
+
+Naukri:
+
+sudharsan.s0612@gmail.com
+Omsairam@12345
+
+ysudheer9381@gmail.com
+Welcome@2027
+
+-----------------------------------------------------------------------------------------------------------------------
+
+RabbitMQ VHost (Most Common in DevOps)
