@@ -1,0 +1,74 @@
+pipeline{
+    agent{
+        node{
+            label'dev'
+        }
+    }
+    tools
+        {
+            maven'mymaven'
+        }
+        stages{
+            stage('code'){
+                steps{
+                    git 'https://github.com/YerraSudheerreddy/one.git'
+                }
+            }
+            stage('build'){
+                steps{
+                    sh'mvn clean package'
+                }
+            }
+            stage('deploy'){
+                steps{
+                    deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '2a6c1e1d-5e7a-48f9-b36c-48508485a877', path: '', url: 'http://3.94.207.124:8080/')], contextPath: 'e-commerce', war: 'target/*.war'
+                }
+            }
+        }
+}
+
+=========================================================================================
+
+pipeline{
+    agent any
+           tools{
+               maven'mymaven'
+           }
+         stages{
+             stage('code'){
+                 steps{
+                     git 'https://github.com/YerraSudheerreddy/one.git'
+                 }
+             }
+             stage('CQA'){
+                 steps{
+                     withSonarQubeEnv('mysonar') {
+                         sh'''
+                         mvn sonar:sonar \
+                        -Dsonar.projectKey=myproject \
+                        -Dsonar.host.url=http://34.228.236.214:9000 \
+                        -Dsonar.login=a12dc121f44841e6d62e54c87ea0730997acfa74
+                        '''
+                      }
+                 }
+             }
+             stage('build'){
+                 steps{
+                     sh'mvn clean package'
+                 }
+             }
+             stage('artifacts'){
+                 steps{
+                     nexusArtifactUploader artifacts: [[artifactId: 'myweb', classifier: '', file: 'target/myweb-8.7.8.war', type: 'war']], credentialsId: '51d313de-9f06-4ab4-b788-c79dc1a67601', groupId: 'in.javahome', nexusUrl: '13.221.135.216:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'myrepo', version: '8.7.8'
+                 }
+             }
+             stage('deploy'){
+                 input{
+                     message"can I deploy"
+                 }
+                 steps{
+                     deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '8bfcddcd-0e39-4ae3-ba80-8f0a9933a5d3', path: '', url: 'http://23.22.71.142:8080/')], contextPath: 'e-commerce', war: 'target/*.war'
+                 }
+             }
+         }
+}
