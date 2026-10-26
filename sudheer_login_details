@@ -1,0 +1,72 @@
+Sudheer
+
+==========================
+Aws credentials
+
+AWS
+
+Mail ID: sudharsansubramanian2000@gmail.com
+
+PWD: Sudharsan@9381
+
+==========
+GIT HUB
+
+USERNAME:YerraSudheerreddy
+
+MAIL ID:syerrachaganti@gmail.com
+
+PASSWORD:Ammanana@9381
+
+Token: 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
+
+============================================================
+
+Jenkins and GIT Installation:
+
+yum install java-21-amazon-corretto -y
+java -version
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+yum install jenkins -y
+systemctl status jenkins
+systemctl start jenkins
+systemctl status jenkins
+yum install git -y
+
+====================================
+jenkins 
+
+USERNAME:YerraSudheerreddy
+PASSWORD:Ammanana@9381
+MAIL ID:syerrachaganti@gmail.com
+
+
+================================================
+Docker Hub
+
+USERNAME:YerraSudheerreddy
+
+MAIL ID:syerrachaganti@gmail.com
+
+PASSWORD:Ammanana@9381
+
+
+
+======================
+java application
+
+below line need to add in pom.xml
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+        </plugin>
+    </plugins>
+</build>
+
+************2**************
+tomcat_users.xml should be in this path /usr/local/tomcat/conf/
