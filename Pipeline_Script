@@ -17,7 +17,7 @@ docker push username/reponame:tag
 pipeline {
     agent any
        tools{
-           maven"mymaven"
+           maven"my maven"
        }
 
     stages {
